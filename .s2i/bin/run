@@ -2,7 +2,7 @@
 set -e
 
 echo "---> Print permissions"
-ll /opt/app-root/spring-boot.jar 
+ls -l /opt/app-root/spring-boot.jar 
 echo "---> Starting Spring Boot application"
 java -jar -Djava.security.egd=file:/dev/./urandom `find /opt/app-root -name *.jar`
 
