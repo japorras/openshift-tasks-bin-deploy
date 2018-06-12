@@ -8,6 +8,7 @@ else
   echo "Found JAR_FILE_URL environment variable for downloading artifact!"
   echo "Executing curl -u $JAR_FILE_USER:$JAR_FILE_PASSWORD -o /opt/app-root/springboot.jar -O $JAR_FILE_URL"
   curl -u $JAR_FILE_USER:$JAR_FILE_PASSWORD -o /opt/app-root/spring-boot.jar -O -k $JAR_FILE_URL
+  chmod 777 /opt/app-root/spring-boot.jar
 fi
 
 # Call default assemble script
