@@ -6,8 +6,8 @@ if [ -z "$JAR_FILE_USER" ]; then
   echo "No JAR_FILE_USER environment variable found"
 else
   echo "Found JAR_FILE_URL environment variable for downloading artifact!"
-  echo "Executing curl -u $JAR_FILE_USER:$JAR_FILE_PASSWORD -o /opt/app-root/springboot.jar -O $JAR_FILE_URL"
-  wget -O /opt/app-root/spring-boot.jar $JAR_FILE_URL
+  echo "Executing curl -L $JAR_FILE_URL > /opt/app-root/springboot.jar"
+  curl -L $JAR_FILE_URL > /opt/app-root/spring-boot.jar
   chmod 777 /opt/app-root/spring-boot.jar
 fi
 
